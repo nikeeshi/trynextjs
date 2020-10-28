@@ -11,11 +11,11 @@ export const Theme = createContext({
   toggleDarkMode: () => {},
 });
 export const ThemeProvider: React.FC = ({ children }) => {
-  const [darkmode, setDarkmode] = useState(isNightNow());
+  const [darkMode, setDarkmode] = useState(isNightNow());
   return (
     <Theme.Provider
       value={{
-        darkMode: darkmode,
+        darkMode,
         toggleDarkMode: () =>
           setDarkmode((currentDarkmode) => !currentDarkmode),
       }}
