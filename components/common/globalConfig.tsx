@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Head from "next/head";
 import { Theme } from "../context/theme";
-export default () => {
+export const GlobalConfig = () => {
   const { darkMode } = useContext(Theme);
   return (
     <>
